@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name": "Unsuck Edline",
+    "description": "This extension tries to make Edline suck less.",
+    "version": "0.1",
+
+    "page_action": {
+        "default_title": "Unsuck Edline"
+    },
+    "permissions" : [
+        "https://www.edline.net/",
+        "https://edline.net/",
+        "http://www.edline.net/",
+        "http://edline.net/",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["bootstrap.js"],
+        "persistent": false
+    }
+}
