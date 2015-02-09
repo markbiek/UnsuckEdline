@@ -1,5 +1,9 @@
 (function($) {
     var $h1 = $('#ed-pageTitle');
+    if($h1.length <= 0) {
+        return;
+    }
+
     var title = $h1.html().toLowerCase().trim();
 
     if(title == 'private reports') {

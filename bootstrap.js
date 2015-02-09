@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener( function(id, info, tab) {
-    if(tab.url.toLowerCase().indexOf("edline.net") > -1) {
+    if(tab.url != undefined && tab.url.toLowerCase().indexOf("edline.net") > -1) {
         chrome.pageAction.show(tab.id);
         chrome.tabs.executeScript(tab.id, {
             "file": "jquery.min.js"
