@@ -27,11 +27,7 @@
                     if(res != null && res.length > 1) {
                         var entId = res[1];
                         var url = 'https://www.edline.net/DocViewBody.page?currentDocEntid=' + entId + '&returnPage=%2FUserDocList.page';
-                        $(this).attr('href', url);
-                        $(this).attr('target', '_blank');
-                        $(this).css( {
-                            'color': '#009900'
-                        });
+                        $(this).attr('href', url).attr('target', '_blank').addClass('unsuck-safe-link');
                     }
                 }
             });

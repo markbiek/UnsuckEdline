@@ -18,5 +18,16 @@
     "background": {
         "scripts": ["bootstrap.js"],
         "persistent": false
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.edline.net/*",
+                "https://edline.net/*",
+                "http://www.edline.net/*",
+                "http://edline.net/*"
+            ],
+            "css": [ "styles.css" ]
+        }
+    ]
 }
