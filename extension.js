@@ -20,11 +20,13 @@
 
             //Find all of the 'View' report links and convert each one from a JS call to a real link
             $('.ed-formTable td a').each( function() {
-                if($(this).html().toLowerCase() == 'view') {
+                console.log($(this).html());
+
+                if($(this).html().toLowerCase() == 'student report') {
                     var oldHref = $(this).attr('href');
                     var res = oldHref.match(/.*?rlViewItm\(['"](.*?)['"].*?/);
 
-                    if(res != null && res.length > 1) {
+                    if(res !== null && res.length > 1) {
                         var entId = res[1];
                         var url = 'https://www.edline.net/DocViewBody.page?currentDocEntid=' + entId + '&returnPage=%2FUserDocList.page';
                         $(this).attr('href', url).attr('target', '_blank').addClass('unsuck-safe-link');
